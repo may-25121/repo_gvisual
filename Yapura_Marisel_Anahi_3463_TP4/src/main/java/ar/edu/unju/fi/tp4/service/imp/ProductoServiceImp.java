@@ -41,8 +41,13 @@ public class ProductoServiceImp implements IProductoService{
 
 	@Override
 	public Producto getUltimoProducto() {
+		Producto producto=new Producto();
 		int indiceUltimoProducto=productos.size() - 1;
-		Producto producto=productos.get(indiceUltimoProducto);
+		if(indiceUltimoProducto>=0) {
+			producto=productos.get(indiceUltimoProducto);
+		}else {
+			this.addProducto( new Producto(726, "Arina", 220,"Blancaflor",5 ));
+		}
 		LOGGER.info("SERVICE: IProductoService -> ProductoServiceImp");
 		LOGGER.info("METHOD: getUltimoProducto()");
 		LOGGER.info("RESULT: devuelve el ultimo producto agregado");
@@ -55,6 +60,17 @@ public class ProductoServiceImp implements IProductoService{
 		LOGGER.info("METHOD: getAllProductos()");
 		LOGGER.info("RESULT: devuelve una lista de los productos agregados");
 		return this.productos;
+	}
+
+	@Override
+	public Producto getUnProducto(int codigo) {
+		Producto p=new Producto();
+		for(Producto producto : this.productos) {
+			if(producto.getCodigo()==codigo) {
+				p=producto;
+			}
+		}
+		return p;
 	}
 
 }

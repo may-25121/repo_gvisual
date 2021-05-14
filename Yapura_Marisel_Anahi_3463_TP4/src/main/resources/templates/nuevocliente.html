@@ -18,15 +18,15 @@
 				<div class="p-5 mx-3 border">
 					<div class="form-group row">
 						<label for="tipoDoc"  class="col-sm-4 col-form-label">Tipo de Documento:</label>
-		  				<select class="custom-select col-sm-8" id="tipoDoc" th:field="${cliente.tipoDocumento}" required>
+		  				<select class="custom-select col-sm-8"  id="tipoDoc" th:field="${cliente.tipoDocumento}" required>
 							<option value="">Seleccione una opción</option>
 							<option value="DNI">DNI</option>
 							<option value="Pasaporte">Pasaporte</option>
 						</select>
 					</div>
 					<div class="form-group row">
-						<label for="nroDoc"  class="col-sm-4 col-form-label">Numero de Documento:</label>
-						<input type="number" id="nroDoc" class="form-control col-sm-8" th:field="${cliente.nroDocumento}" placeholder="Ingresar DNI" required>
+						<label for="nroDocumento"  class="col-sm-4 col-form-label">Numero de Documento:</label>
+						<input type="number" id="nroDocumento" class="form-control col-sm-8" th:field="${cliente.nroDocumento}" placeholder="Ingresar DNI" required>
 					</div>
 					<div class="form-group row">
 						<label for="nombre"  class="col-sm-4 col-form-label">Nombre y Apellido:</label>
@@ -46,7 +46,7 @@
 					</div>
 					<div class="form-group row">
 						<label for="codigoArea" class="col-sm-4 col-form-label">Código de Area:</label>
-						<input type="number" id="codigoAreaTelefono" class="form-control col-sm-8" th:field="${cliente.codigoAreaTelefono}" placeholder="Ingresar codigo de area" required>
+						<input type="number" id="codigoArea" class="form-control col-sm-8" th:field="${cliente.codigoAreaTelefono}" placeholder="Ingresar codigo de area" required>
 					</div>
 					<div class="form-group row">
 						<label for="nroTelefono" class="col-sm-4 col-form-label">Numero de Teléfono</label>
@@ -61,7 +61,7 @@
 				 	</div>
 				</div> 
 				</form> 
-				<aside class="col-sm-12 col-md-3" th:insert="layout/publicidad :: aside"></aside>
+				<aside class="col-sm-12 col-md-3 text-center" th:insert="layout/publicidad :: aside"></aside>
 			</div>
 		</div>
 		

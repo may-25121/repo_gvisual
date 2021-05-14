@@ -49,6 +49,7 @@ public class ProductoController {
 		return model;
 	}
 	
+	
 	@GetMapping("/producto/listar")
 	public String getProductosPage(Model model) {
 		LOGGER.info("CONTROLLER: ProductoController con /producto/listar invoca al metodo get");
